@@ -33,20 +33,20 @@ function App() {
         if (videoRef.current) {
           videoRef.current.srcObject = stream;
         }
-        if (permissonGranted === null) {
-          requestCameraPermisson();
-        }
-
-        return () => {
-          if (viedoStream) {
-            viedoStream.getTracks().forEach((track) => {
-              track.stop();
-            });
-          }
-        };
       } catch (error) {
         console.log(error);
       }
+      if (permissonGranted === null) {
+        requestCameraPermisson();
+      }
+
+      return () => {
+        if (viedoStream) {
+          viedoStream.getTracks().forEach((track) => {
+            track.stop();
+          });
+        }
+      };
     };
   }, [permissonGranted, viedoStream]);
   // QR 코드 해석
