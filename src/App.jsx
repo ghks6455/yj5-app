@@ -64,7 +64,7 @@ function App() {
       //   progress: undefined,
       //   theme: "light",
       // });
-      alert("성공");
+      alert(`성공! QR CODE : ${qrData}`);
     }
   }, [qrData]);
 
