@@ -10,9 +10,9 @@ function App() {
             <IoIosMenu size={28} />
           </div>
           <div className="flex gap-4">
-            <p>
-              <CiLogin />
-            </p>
+            <div>
+              <CiLogin size={28} />
+            </div>
             <p>signin</p>
           </div>
         </div>
